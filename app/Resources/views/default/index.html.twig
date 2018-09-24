@@ -1,0 +1,59 @@
+{% extends 'base.html.twig' %}
+
+{% block menu %}
+<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+    <ul class="nav navbar-nav navbar-right active">
+        <li class="hidden">
+            <a href="#page-top"></a>
+        </li>
+        <li class="page-scroll">
+            <a href="/">Home</a>
+        </li>
+        <li class="page-scroll">
+            <a href="#portfolio">Accueil</a>
+        </li>
+        <li class="page-scroll">
+            <a href="#about">A propos de</a>
+        </li>
+        <li>
+            <a href="https://ttvo.fr/blog/posts">My Blog</a>
+        </li>
+    </ul>
+</div>
+{% endblock %}
+
+{% block body %}
+<section id="portfolio">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12 text-center">
+                <h2>Accueil</h2>
+                <hr class="star-primary">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-10 col-lg-offset-1 col-md-10 col-md-offset-1 col-sm-10 col-sm-offset-1">
+                <p>
+                    BileMo est une entreprise offrant toute une sélection de téléphones mobiles haut de gamme. Le business modèle de BileMo n’est pas de vendre directement ses produits sur le site web, mais de fournir à toutes les plateformes qui le souhaitent l’accès au catalogue via une API (Application Programming Interface).
+                </p>
+                <p>
+                    <strong>
+                    Si vous voulez tester cet API, téléchargez <a href="https://www.getpostman.com/">POSTMAN</a>, et soit <a href="{{ path('fos_user_registration_register') }}">INSCRIVEZ-VOUS</a> pour recevoir le client_id et client_secret dans votre boîte mail, soit utilisez :
+                    </strong><br/></p>
+                <p class="col-lg-10 col-lg-offset-2 col-md-10 col-md-offset-2 col-sm-10 col-sm-offset-2" style="word-break: break-all">
+                    <em>{<br/>
+                        <strong>"grant_type"</strong>:"password",<br/>
+                        <strong>"client_id"</strong>:"1_scayjpmm2s08k0ooo8gos840gkowsc8oowkogokgowwk0cgg4",<br/>
+                        <strong>"client_secret"</strong>:"5uuv8a5vf2scgs4c8ksg0scwss4swg4css44w0o0ws4oswokws",<br/>
+                        <strong>"username"</strong>:"trinh",<br/>
+                        <strong>"password"</strong>:"123"<br/>
+                    }
+                    </em>
+                </p>
+                <a href="/assets/doc/Tests_with_Postman.pdf">LIRE DOCUMENT</a>
+                {#<a href="{{ path('fos_user_security_login') }}">Login</a> - <a href="{{ path('fos_user_registration_register') }}">Inscription</a> - <a href="{{ path('fos_user_security_logout') }}">Logout</a>#}
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
